@@ -1,0 +1,9 @@
+@import './src/assets/scss/_partials/vars';
+
+.container {
+    max-width: $container-width-md;
+    min-width: $container-width-xs;
+    height: 100%;
+    margin: 0 auto;
+    background-color: $bg-color-primary;
+}

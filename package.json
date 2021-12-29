@@ -11,6 +11,7 @@
     "@types/node": "^16.11.17",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "axios": "^0.24.0",
     "craco-alias": "^3.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -22,7 +23,10 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "mock:start": "npm run mock:update && cross-env DELAYMS=0 npm run mock:standalone && npm run start",
+    "mock:standalone": "node mock/server.js &",
+    "mock:update": "rm -rf ./mock && tsc --outDir ./mock --p tsconfig.mock.json"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +45,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "sass": "^1.45.1"
   }
 }
