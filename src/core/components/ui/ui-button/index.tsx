@@ -42,8 +42,8 @@ export const UiButton: React.FC<Props> = React.memo((
                 ${styles[colorScheme]}
             `}
         >
-            {title}
             {icon}
+            {title}
         </button>
     );
 });

@@ -1,7 +1,7 @@
 import React from 'react';
-import { InputBlock } from '@modules/person-search/componets/input-block';
+import { InputBlock } from '@modules/persons/search/componets/input-block';
 import useDebounce from '@core/hooks/useDebounce';
-import { PersonsBlock } from '@modules/person-search/componets/persons-block';
+import { PersonsBlock } from '@modules/persons/search/componets/persons-block';
 import { usePersonsData } from '@core/hooks/usePersonsData';
 import { UiLoading } from '@core/components/ui/ui-loading';
 import { UiError } from '@core/components/ui/ui-error';

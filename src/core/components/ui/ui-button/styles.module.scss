@@ -3,18 +3,28 @@
 
 .btn {
     @include border-radius($border-radius);
+    cursor: pointer;
     border: none;
     font-weight: 500;
     line-height: 150%;
-    /* identical to box height, or 27px */
     text-indent: 1px;
     text-transform: uppercase;
     &.info {
+        color: $font-color-secondary;
         background-color: $btn-bg-info;
+    }
+    &.bordered {
+        background: none;
+        color: $font-color-primary;
+        border: $border;
     }
     &.small {
         font-size: 18px;
-        color: $font-color-secondary;
         padding: 8px 14px;
+    }
+    &.large {
+        font-size: 20px;
+        line-height: 36px;
+        padding: 12px 48px;
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { PersonSingleRating } from '@modules/person-search/componets/person-single-rating';
+import { Link } from 'react-router-dom';
+import { PersonSingleRating } from '@modules/persons/search/componets/person-single-rating';
 import { UiButton, UiButtonSize } from '@core/components/ui/ui-button';
 import { UiGlobalColorScheme } from '@core/constants/ui-constants';
 import { ISearchResponsePerson } from '@core/services/api/endpoints/persons-api-class';
@@ -19,11 +20,13 @@ export const PersonSingle: React.FC<Props> = React.memo((
             <div>{person.name}</div>
             <div className={styles.info}>
                 <PersonSingleRating rating={person.followers}/>
-                <UiButton
-                    title={'Mint'}
-                    buttonSize={UiButtonSize.small}
-                    colorScheme={UiGlobalColorScheme.info}
-                />
+                <Link to={`/persons/${person.id}`}>
+                    <UiButton
+                        title={'Mint'}
+                        buttonSize={UiButtonSize.small}
+                        colorScheme={UiGlobalColorScheme.info}
+                    />
+                </Link>
             </div>
         </div>
     )

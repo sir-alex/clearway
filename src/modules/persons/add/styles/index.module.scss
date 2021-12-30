@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    button {
+        min-width: 250px;
+    }
+}
+
+.txt {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    text-indent: 1px;
+    margin: 0 0 18px 0;
+}
+
+.topBlock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 300px;
+}
+
+.backRowIcon {
+    margin-right: 13px;
+}
+
+.blockContainer {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

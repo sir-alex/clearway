@@ -4,6 +4,7 @@
     max-width: $container-width-md;
     min-width: $container-width-xs;
     height: 100%;
+    overflow: auto;
     margin: 0 auto;
     background-color: $bg-color-primary;
 }

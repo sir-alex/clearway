@@ -20,8 +20,24 @@ export class PersonsRouter extends Core {
         }
     };
 
+    private getPersonSingle = (req: express.Request, res: express.Response, _next: express.NextFunction): void => {
+        let mockJson: JSON | null;
+        let responseStatus: number;
+        switch (req.params.personId) {
+            case typeof null:
+                responseStatus = 404;
+                mockJson = null;
+                break;
+            default:
+                responseStatus = 200;
+                mockJson = this.getMockJson(`persons/get-person-${req.params.personId}.json`);
+        }
+        res.status(responseStatus).json(mockJson);
+    };
+
     private init(): void {
         this.router.get('/search', this.getPersonsByQuery);
+        this.router.get('/:personId', this.getPersonSingle);
     }
 
 }
