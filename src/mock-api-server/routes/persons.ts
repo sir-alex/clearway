@@ -11,9 +11,13 @@ export class PersonsRouter extends Core {
         this.init();
     }
 
-    private getPersonsByQuery = (_req: express.Request, res: express.Response, _next: express.NextFunction): void => {
-        const mockJsonSuccess: JSON = this.getMockJson('persons/get-query.json');
-        res.status(200).json(mockJsonSuccess);
+    private getPersonsByQuery = (req: express.Request, res: express.Response, _next: express.NextFunction): void => {
+        if (req.query.query === 'error') {
+            res.status(500).send(null);
+        } else {
+            const mockJsonSuccess: JSON = this.getMockJson('persons/get-query.json');
+            res.status(200).json(mockJsonSuccess);
+        }
     };
 
     private init(): void {

@@ -15,6 +15,7 @@
     "craco-alias": "^3.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-query": "^3.34.7",
     "react-scripts": "5.0.0",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2"
@@ -24,7 +25,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "mock:start": "npm run mock:update && cross-env DELAYMS=0 npm run mock:standalone && npm run start",
+    "mock:start": "npm run mock:update && cross-env DELAYMS=2500 npm run mock:standalone && npm run start",
     "mock:standalone": "node mock/server.js &",
     "mock:update": "rm -rf ./mock && tsc --outDir ./mock --p tsconfig.mock.json"
   },

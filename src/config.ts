@@ -5,6 +5,11 @@ export const CONFIG = {
         VERSION: process.env.API_VERSION || 'v1',
         ENDPOINTS: {
             SEARCH_PERSONS: 'persons/search'
+        },
+        FETCH_OPTIONS: {
+            retry: false,
+            refetchOnWindowFocus: false,
+            refetchOnMount: false
         }
     },
 }
