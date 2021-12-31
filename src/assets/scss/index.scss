@@ -14,8 +14,11 @@ html, body, #root {
 }
 
 body {
-    background: $bg-color-third;
+    background: $bg-color-primary;
     color: $font-color-primary;
+    @media (min-width: $container-width-sm) {
+        background: $bg-color-third;
+    }
 }
 
 .content {
