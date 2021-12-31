@@ -25,6 +25,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "heroku-postbuild": "npm run mock:update && cross-env DELAYMS=2500 npm run mock:standalone && npm run start",
     "test": "craco test",
     "eject": "craco eject",
     "mock:start": "npm run mock:update && cross-env DELAYMS=2500 npm run mock:standalone && npm run start",
