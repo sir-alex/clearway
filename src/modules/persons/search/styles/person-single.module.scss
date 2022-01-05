@@ -14,9 +14,7 @@
     align-items: center;
 }
 
-.name {
-    > span {
-        background: $font-color-primary;
-        color: $font-color-secondary;
-    }
+.highlight {
+    background: $font-color-primary;
+    color: $font-color-secondary;
 }
