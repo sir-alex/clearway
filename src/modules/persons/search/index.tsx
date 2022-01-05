@@ -18,6 +18,7 @@ export const PersonSearch: React.FC = React.memo(() => {
 
     return (
         <div className="content">
+            <h3 className={styles.title}>Add a new creator or project</h3>
             <InputBlock
                 value={searchQuery}
                 onChange={searchQueryHandler}
@@ -34,6 +35,7 @@ export const PersonSearch: React.FC = React.memo(() => {
             }
             {!isLoading && !error && data && data.persons.length > 0 &&
                 <PersonsBlock
+                    search={searchQuery}
                     persons={data.persons}
                 />
             }
