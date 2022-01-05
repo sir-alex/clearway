@@ -14,9 +14,15 @@ export const TopBar: React.FC = React.memo(() => {
             >
                 Truefans
             </a>
-            <UiIcon
-                type={UiIconType.menu}
-            />
+            <div>
+                <UiIcon
+                    type={UiIconType.personalCabinet}
+                    className={styles.personalCabinet}
+                />
+                <UiIcon
+                    type={UiIconType.wallet}
+                />
+            </div>
         </section>
     )
 })
