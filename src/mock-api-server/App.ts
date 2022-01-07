@@ -2,7 +2,7 @@ import cors from 'cors';
 import express from 'express';
 import { createServer, Server } from 'http';
 import logger from 'morgan';
-import { PersonsRouter } from './routes/persons';
+import { ArtistsRouter } from './routes/artists';
 import bodyParser from 'body-parser';
 
 export class MockApiServer {
@@ -40,8 +40,8 @@ export class MockApiServer {
     }
 
     private routes(): void {
-        const personsRouter: PersonsRouter = new PersonsRouter();
-        this.app.use('/api/v1/persons/', personsRouter.router);
+        const artistsRouter: ArtistsRouter = new ArtistsRouter();
+        this.app.use('/api/v1/artists/', artistsRouter.router);
     }
 
 }

@@ -14,6 +14,7 @@ interface Props {
     type?: UiInputType;
     value?: string | number;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    placeholder?: string;
     icon?: JSX.Element;
 }
 

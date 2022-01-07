@@ -1,0 +1,57 @@
+@import '../../../../assets/scss/_partials/mixins';
+@import '../../../../assets/scss/_partials/vars';
+
+.container {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #000;
+    @include border-radius(10px);
+    a {
+        text-decoration: none;
+        color: $font-color-primary;
+        display: flex;
+    }
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    background-color: $bg-color-third;
+    border: 1px solid darken($bg-color-third, 20%);
+    @include border-radius(50px);
+    > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include border-radius(50px);
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+.name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.followers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+.followersIcon {
+    margin-right: 5px;
+}
+
+.highlight {
+    background: $font-color-primary;
+    color: $font-color-secondary;
+}

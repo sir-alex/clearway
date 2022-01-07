@@ -1,10 +1,10 @@
-import { PersonsApiClass } from '@core/services/api/endpoints/persons-api-class';
+import { ArtistsApiClass } from '@core/services/api/endpoints/artists-api-class';
 
 class ApiClass {
-    public persons: PersonsApiClass;
+    public artists: ArtistsApiClass;
 
     constructor() {
-        this.persons = new PersonsApiClass();
+        this.artists = new ArtistsApiClass();
     }
 }
 

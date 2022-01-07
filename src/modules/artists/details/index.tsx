@@ -4,16 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { UiIcon, UiIconType } from '@core/components/ui/ui-icon';
 import { UiButton, UiButtonSize } from '@core/components/ui/ui-button';
 import { UiGlobalColorScheme } from '@core/constants/ui-constants';
-import { usePersonSingleData } from '@core/hooks/usePersonSingleData';
+import { useArtistSingleData } from '@core/hooks/useArtistSingleData';
 import { UiLoading } from '@core/components/ui/ui-loading';
 import { UiError } from '@core/components/ui/ui-error';
 
 import styles from './styles/index.module.scss';
 
-export const PersonAdd: React.FC = React.memo(() => {
-    const { personId } = useParams();
+export const ArtistDetails: React.FC = React.memo(() => {
+    const { artistId } = useParams();
     const navigate = useNavigate();
-    const { isLoading, data, error } = usePersonSingleData(personId);
+    const { isLoading, data, error } = useArtistSingleData(artistId);
     if (isLoading) {
         return (
             <div className={styles.blockContainer}>
@@ -31,7 +31,8 @@ export const PersonAdd: React.FC = React.memo(() => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.topBlock}>
+            <h3>{data?.name || 'N/A'}</h3>
+{/*            <div className={styles.topBlock}>
                 <p className={styles.txt}>
                     {`sorry, we could not find ${data?.name || 'N/A'}.`}
                     <br/>
@@ -49,7 +50,7 @@ export const PersonAdd: React.FC = React.memo(() => {
                 colorScheme={UiGlobalColorScheme.bordered}
                 icon={<UiIcon type={UiIconType.backRow} className={styles.backRowIcon}/>}
                 onClick={() => navigate(-1)}
-            />
+            />*/}
         </div>
     )
 })

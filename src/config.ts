@@ -4,8 +4,8 @@ export const CONFIG = {
         API_PREFIX: process.env.API_PREFIX || 'api',
         VERSION: process.env.API_VERSION || 'v1',
         ENDPOINTS: {
-            SEARCH_PERSONS: 'persons/search',
-            GET_PERSON: 'persons/:personId'
+            SEARCH_ARTISTS: 'artists/search',
+            GET_ARTIST: 'artists/:artistId'
         },
         FETCH_OPTIONS: {
             retry: false,

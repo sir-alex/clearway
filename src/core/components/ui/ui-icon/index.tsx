@@ -7,7 +7,8 @@ export enum UiIconType {
     search = 'search',
     personalCabinet = 'personalCabinet',
     wallet = 'wallet',
-    relations = 'relations'
+    relations = 'relations',
+    followers = 'followers'
 }
 
 interface Props extends GeneralProps {
@@ -60,6 +61,17 @@ export const UiIcon: React.FC<Props> = React.memo(({type, className}) => {
             </svg>
         )
     }
+    const followersIcon = () => {
+        return (
+            <svg className={className} version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 19" width="25" height="19">
+                <title>New Project</title>
+                <defs>
+                    <image width="200" height="200" id="img1" href="data:image/png;base64,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"/>
+                </defs>
+                <use id="256612-200" href="#img1" transform="matrix(.133,0,0,.135,-0.781,-3.958)"/>
+            </svg>
+        )
+    }
     switch (type) {
         case UiIconType.menu:
             return menuIcon();
@@ -71,6 +83,8 @@ export const UiIcon: React.FC<Props> = React.memo(({type, className}) => {
             return walletIcon();
         case UiIconType.relations:
             return relationsIcon();
+        case UiIconType.followers:
+            return followersIcon();
         case UiIconType.search:
         default:
             return searchIcon();

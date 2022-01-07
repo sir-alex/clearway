@@ -19,6 +19,7 @@ export const InputBlock: React.FC<Props> = React.memo((
             value={value}
             onChange={onChange}
             icon={<UiIcon type={UiIconType.search} className={styles.searchIcon} />}
+            placeholder={'filter by name'}
         />
     )
 })

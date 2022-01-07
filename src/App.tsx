@@ -2,7 +2,7 @@ import React from 'react';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { MainLayout } from '@core/layout/main/main';
-import { PersonsModule } from '@modules/persons';
+import { PersonsModule } from '@modules/artists';
 
 const queryClient = new QueryClient();
 
@@ -13,7 +13,7 @@ function App() {
                 <PersonsModule/>
             </MainLayout>
             {process.env.NODE_ENV !== 'production' &&
-                <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
+                <ReactQueryDevtools initialIsOpen={false} position="bottom-left" />
             }
         </QueryClientProvider>
     );
