@@ -1,6 +1,6 @@
 export const CONFIG = {
     API: {
-        HOST: process.env.API_HOST || 'http://localhost:3004',
+        HOST: 'https://clearway-mock-server.herokuapp.com',
         API_PREFIX: process.env.API_PREFIX || 'api',
         VERSION: process.env.API_VERSION || 'v1',
         ENDPOINTS: {
