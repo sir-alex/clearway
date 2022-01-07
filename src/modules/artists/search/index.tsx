@@ -7,6 +7,9 @@ import { UiLoading } from '@core/components/ui/ui-loading';
 import { UiError } from '@core/components/ui/ui-error';
 
 import styles from './styles/index.module.scss';
+import { UiIcon, UiIconType } from '@core/components/ui/ui-icon';
+import { Link } from 'react-router-dom';
+import { ARTISTS_ROUTES_CONSTANTS } from '@modules/artists/routes-constants';
 
 export const ArtistSearch: React.FC = React.memo(() => {
     const [filterQuery, setFilterQuery] = React.useState('');
@@ -39,6 +42,14 @@ export const ArtistSearch: React.FC = React.memo(() => {
                     artists={data.artists}
                 />
             }
+            <Link
+                to={ARTISTS_ROUTES_CONSTANTS.ADD}
+                className={styles.addButton}
+            >
+                <UiIcon
+                    type={UiIconType.addIcon}
+                />
+            </Link>
         </div>
     )
 })

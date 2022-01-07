@@ -4,11 +4,13 @@ import { BrowserRouter, Navigate, Routes } from 'react-router-dom';
 import { ARTISTS_ROUTES_CONSTANTS } from '@modules/artists/routes-constants';
 import { ArtistSearch } from '@modules/artists/search';
 import { ArtistDetails } from '@modules/artists/details';
+import { ArtistAdd } from '@modules/artists/add';
 
 export const PersonsModule: React.FC = (): JSX.Element => {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path={ARTISTS_ROUTES_CONSTANTS.ADD} element={<ArtistAdd/>}/>
                 <Route path={ARTISTS_ROUTES_CONSTANTS.ARTIST_SINGLE} element={<ArtistDetails/>}/>
                 <Route path={ARTISTS_ROUTES_CONSTANTS.SEARCH} element={<ArtistSearch/>}/>
                 <Route

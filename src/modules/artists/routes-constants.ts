@@ -1,4 +1,5 @@
 export const enum ARTISTS_ROUTES_CONSTANTS {
+    ARTIST_SINGLE = '/artists/:artistId',
     SEARCH = '/artists/search',
-    ARTIST_SINGLE = '/artists/:artistId'
+    ADD = '/artists/add'
 }
