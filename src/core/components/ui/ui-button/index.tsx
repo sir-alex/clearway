@@ -21,6 +21,7 @@ interface Props {
     onClick?: (event: React.SyntheticEvent<HTMLButtonElement>) => void;
     title?: string | JSX.Element;
     icon?: JSX.Element;
+    className?: string;
 }
 
 export const UiButton: React.FC<Props> = React.memo((
@@ -30,6 +31,7 @@ export const UiButton: React.FC<Props> = React.memo((
         buttonType,
         colorScheme,
         icon,
+        className,
         ...props
     }) => {
     return (
@@ -40,6 +42,7 @@ export const UiButton: React.FC<Props> = React.memo((
                 ${styles.btn}  
                 ${styles[buttonSize]} 
                 ${styles[colorScheme]}
+                ${className}
             `}
         >
             {icon}

@@ -15,12 +15,12 @@ export const ArtistsBlock: React.FC<Props> = React.memo((
         filter,
         artists
     }) => {
-    function isNameMatch(name: string): boolean {
-        const re = new RegExp(filter, 'gi');
-        const found = name.match(re);
-        return (found && found.length > 0) ? true : false;
-    }
     const filteredData = React.useMemo(() => {
+        function isNameMatch(name: string): boolean {
+            const re = new RegExp(filter, 'gi');
+            const found = name.match(re);
+            return (found && found.length > 0) ? true : false;
+        }
         return artists.filter(artist => isNameMatch(artist.name));
     }, [artists, filter]);
     return (

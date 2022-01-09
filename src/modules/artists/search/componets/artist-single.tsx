@@ -20,7 +20,10 @@ export const ArtistSingle: React.FC<Props> = React.memo((
         <div className={styles.container}>
             <Link to={`/artists/${artist.id}`}>
                 <div className={styles.avatar}>
-                    <img src={artist.avatar} alt={artist.name}/>
+                    <img
+                        src={artist.avatar}
+                        alt={artist.name}
+                    />
                 </div>
                 <div className={styles.info}>
                     <Highlighter
