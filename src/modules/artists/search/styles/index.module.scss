@@ -1,3 +1,6 @@
+@import '../../../../assets/scss/_partials/mixins';
+@import '../../../../assets/scss/_partials/vars';
+
 .blockContainer {
     padding: 50px 0;
     display: flex;
@@ -16,10 +19,19 @@
 }
 
 .addButton {
-    display: block;
+    display: flex;
     width: 75px;
     height: 75px;
     position: absolute;
     right: 30px;
     bottom: 30px;
+    background-color: $btn-bg-info;
+    justify-content: center;
+    align-items: center;
+    @include border-radius(50px);
+    > svg {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
 }
